@@ -9,40 +9,31 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget> [
-              Container(
-                height: double.infinity,
-                width: 100,
-                color: Colors.brown,
-                child: Text('Hello'),
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                backgroundImage: NetworkImage('https://sketchok.com/images/articles/01-cartoons/068-oggy/05/11.jpg'),
+                radius: 50,
               ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget> [
-                    Container(
-                      color: Colors.yellow,
-                      height: 100,
-                      width: 100,
-                    ),
-                    Container(
-                      color: Colors.green,
-                      height: 100,
-                      width: 100,
-                    ),
-                  ],
+              Text(
+                  'Vatt Vichet',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
-              Container(
-                height: double.infinity,
-                width: 100,
-                color: Colors.blue,
-                child: Text('Hello'),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  letterSpacing: 1.5,
+                ),
               ),
             ],
           ),
@@ -51,4 +42,3 @@ class Myapp extends StatelessWidget {
     );
   }
 }
-
