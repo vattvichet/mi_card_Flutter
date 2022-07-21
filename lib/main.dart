@@ -9,22 +9,23 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color.fromRGBO(229, 204, 189, 1),
         body: SafeArea(
           child: Column(
-
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                backgroundImage: NetworkImage('https://sketchok.com/images/articles/01-cartoons/068-oggy/05/11.jpg'),
+                backgroundImage: NetworkImage(
+                    'https://sketchok.com/images/articles/01-cartoons/068-oggy/05/11.jpg'),
                 radius: 50,
               ),
               Text(
-                  'Vatt Vichet',
+                'Vatt Vichet',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Color.fromRGBO(122, 125, 104, 1),
                 ),
               ),
               Text(
@@ -32,64 +33,53 @@ class Myapp extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'SourceSansPro',
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  letterSpacing: 1.5,
+                  color: Color.fromRGBO(122, 125, 104, 1),
+                  letterSpacing: 3,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.white,
-                height: 50,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-            
-                child: Row(
-
-                  children: <Widget>[
-
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      '+016 123 1234',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
               ),
-              Container(
-               padding: EdgeInsets.all(10),
-                height: 50,
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.drafts_sharp,
-                      color: Colors.teal,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+016 123 1234',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(
-                      width: 10,
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.drafts_sharp,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'vichetvatt.flutter@gmail.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
-                    Text(
-                      'vichetvatt.flutter@gmail.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
